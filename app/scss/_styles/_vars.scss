@@ -1,0 +1,38 @@
+$FFInter: "Inter", "Arial";
+
+//breakpoints
+$laptop: 1439px;
+$table: 1023px;
+$mobile: 767px;
+$mediumMobile: 576px;
+$smallMobile: 374px;
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin table {
+  @media screen and (max-width: $table) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mediumMobile {
+  @media screen and (max-width: $mediumMobile) {
+    @content;
+  }
+}
+
+@mixin smallMobile {
+  @media screen and (max-width: $smallMobile) {
+    @content;
+  }
+}
