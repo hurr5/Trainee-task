@@ -1,0 +1,16 @@
+mixin popup()
+  .popup#popup(style="display: none;")
+    .popup__content
+      form.popup__form(id="popupForm" novalidate)
+        label
+          span Почта:
+          input(type="email" id="email" required)
+        label
+          span Телефон:
+          input(type="tel" id="phone" required)
+        label
+          span Описание:
+          textarea(id="description")
+        button.popup__submit(type="submit") Отправить
+      .popup__message.hidden Форма отправлена!
+      span.hidden.popup__loader

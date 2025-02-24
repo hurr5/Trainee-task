@@ -1,0 +1,25 @@
+@import '_vars.scss';
+
+.mySwiperThumbs {
+  margin-top: 10px;
+}
+
+.swiper-slide.main-picture img {
+  object-fit: none;
+}
+
+.slider__thumbs {
+  margin-top: 50px;
+}
+
+.swiper-slide.thumbnail {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+@include table {
+  .swiper-slide.main-picture img {
+    object-fit: contain;
+  }  
+}

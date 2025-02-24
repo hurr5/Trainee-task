@@ -1,5 +1,21 @@
-include layouts/modules/_m-head.pug
+include layouts/components/popup.pug
+include layouts/components/slider.pug
+include layouts/components/thumbs.pug
+include layouts/components/accordeon.pug
 
-html(lang='ru')
-  +m-head
-  body
+doctype html
+html(lang="ru")
+  head
+    title Pug
+    link(rel="stylesheet", href="../scss/index.scss")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    script(src="../js/index.js")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+    body
+    header.header
+      button.openPopupButton Открыть форму
+    +popup()
+    +slider()
+    .slider__thumbs
+      +slider-thumbs()
+    +accordeon()
