@@ -92,13 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
       showErrors(errors);
       loaderBox.classList.add("hidden");
       return;
-    } else {
-      messageBox.classList.remove("hidden");
-      form.reset();
-      setTimeout(() => {
-        messageBox.classList.add("hidden");
-        Fancybox.close();
-      }, 2000);
     }
 
     setTimeout(() => {
@@ -112,8 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((data) => {
           loaderBox.classList.add("hidden");
+
           messageBox.classList.remove("hidden");
           form.reset();
+
           setTimeout(() => {
             messageBox.classList.add("hidden");
             Fancybox.close();

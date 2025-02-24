@@ -4,35 +4,33 @@
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 50px;
+  &__label {
+    display: block;
+    padding: 15px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;  
+    &:hover {
+      background-color: darkblue;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; 
+    max-height: 0;
+    padding: 0 15px;
+  }
 }
 
 input[type="checkbox"] {
   display: none;
-}
-
-.accordeon__label {
-  display: block;
-  padding: 15px;
-  background-color: blue;
-  color: #fff;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 5px;  
-  &:hover {
-    background-color: darkblue;
-  }
-}
-
-.accordeon__content {
-  display: none;
-  padding: 15px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  margin-top: 5px;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out; 
-  max-height: 0;
-  padding: 0 15px;
 }
 
 input[type="checkbox"]:checked + label + .accordeon__content {
